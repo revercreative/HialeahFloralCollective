@@ -30,7 +30,6 @@
       overflow-x: hidden;
     }
 
-    /* GRAIN OVERLAY */
     body::before {
       content: '';
       position: fixed;
@@ -41,7 +40,6 @@
       opacity: 0.6;
     }
 
-    /* NAV */
     nav {
       position: fixed;
       top: 0;
@@ -82,7 +80,6 @@
 
     .nav-links a:hover { color: var(--chartreuse); }
 
-    /* HERO */
     .hero {
       position: relative;
       min-height: 100vh;
@@ -140,7 +137,6 @@
       animation: fadeIn 1s ease forwards 1s;
     }
 
-    /* SECTIONS */
     section {
       position: relative;
       z-index: 1;
@@ -175,7 +171,6 @@
       margin-bottom: 48px;
     }
 
-    /* WELCOME */
     .welcome-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -245,7 +240,6 @@
       text-align: right;
     }
 
-    /* SCOPE */
     .scope-table {
       width: 100%;
       border-collapse: collapse;
@@ -279,7 +273,6 @@
       padding-right: 40px;
     }
 
-    /* DELIVERABLES */
     .deliverables-grid {
       display: grid;
       gap: 2px;
@@ -311,6 +304,27 @@
       line-height: 1.6;
     }
 
+    .deliverable-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 12px;
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--chartreuse);
+      text-decoration: none;
+      opacity: 0.85;
+      transition: opacity 0.2s;
+    }
+
+    .deliverable-link:hover { opacity: 1; }
+
+    .deliverable-link::before {
+      content: '↗';
+      font-size: 12px;
+    }
+
     .status-badge {
       font-size: 10px;
       letter-spacing: 0.15em;
@@ -335,7 +349,6 @@
       border-color: rgba(255,255,255,0.1);
     }
 
-    /* FOOTER */
     footer {
       position: relative;
       z-index: 1;
@@ -365,7 +378,6 @@
 
     .footer-link:hover { color: var(--chartreuse); }
 
-    /* ANIMATIONS */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
@@ -376,7 +388,6 @@
       to { opacity: 1; }
     }
 
-    /* RESPONSIVE */
     @media (max-width: 768px) {
       nav { padding: 20px 24px; }
       .nav-links { display: none; }
@@ -390,7 +401,6 @@
 </head>
 <body>
 
-  <!-- NAV -->
   <nav>
     <a href="#" class="nav-logo">Rêver Creative</a>
     <ul class="nav-links">
@@ -400,7 +410,6 @@
     </ul>
   </nav>
 
-  <!-- HERO -->
   <div class="hero">
     <p class="hero-eyebrow">Client Portal · Rêver Creative</p>
     <h1 class="hero-title">Hialeah<br/><em>Floral Collective</em></h1>
@@ -408,7 +417,6 @@
     <div class="hero-line"></div>
   </div>
 
-  <!-- WELCOME -->
   <section id="welcome">
     <p class="section-label">01 — Welcome</p>
     <div class="welcome-grid">
@@ -452,7 +460,6 @@
     </div>
   </section>
 
-  <!-- SCOPE -->
   <section id="scope">
     <p class="section-label">02 — Project Scope</p>
     <h2 class="section-title">The Work.</h2>
@@ -480,7 +487,6 @@
     </table>
   </section>
 
-  <!-- DELIVERABLES -->
   <section id="deliverables">
     <p class="section-label">03 — Deliverables</p>
     <h2 class="section-title">Where We Are.</h2>
@@ -490,7 +496,6 @@
         <div>
           <p class="deliverable-name">Logo Concepts</p>
           <p class="deliverable-desc">2 initial logo concepts for review and selection.</p>
-          <!-- [DRIVE_LINK_PLACEHOLDER] -->
         </div>
         <span class="status-badge upcoming">Upcoming</span>
       </div>
@@ -499,7 +504,6 @@
         <div>
           <p class="deliverable-name">Revisions</p>
           <p class="deliverable-desc">1 round of revisions on the selected concept.</p>
-          <!-- [DRIVE_LINK_PLACEHOLDER] -->
         </div>
         <span class="status-badge upcoming">Upcoming</span>
       </div>
@@ -508,7 +512,7 @@
         <div>
           <p class="deliverable-name">Final Logo Suite</p>
           <p class="deliverable-desc">Primary, secondary, and submark. Full color, black, and white. PNG, JPG, EPS.</p>
-          <!-- [DRIVE_LINK_PLACEHOLDER] -->
+          <a class="deliverable-link" href="https://drive.google.com/drive/folders/1LFE2U6UZLiELrwc0KDQT9k38hiE_1RRK?usp=drive_link" target="_blank">View Files</a>
         </div>
         <span class="status-badge upcoming">Upcoming</span>
       </div>
@@ -516,7 +520,6 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <span class="footer-logo">Rêver Creative</span>
     <a href="https://revercrt.com" target="_blank" class="footer-link">revercrt.com</a>
